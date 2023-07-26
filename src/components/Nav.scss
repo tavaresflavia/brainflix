@@ -1,0 +1,122 @@
+@use "../styles/partials/typography";
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
+.nav{
+
+    margin:1rem 0;
+    @include section-padding;
+    
+
+    @include tablet {
+        margin: 1.5rem auto;
+        @include flex-justify(space-between);
+
+  
+    }
+   
+
+    &__logo-box{
+        @include flex-justify(center);
+        align-items: center;
+        
+    }
+
+    &__logo{
+        max-height: 1.5625rem;
+        max-width: 7.5rem;
+
+    }
+
+    &__interactive-bar{
+        @include tablet {
+        @include flex-justify(space-between);
+        }
+
+
+    }
+
+    &__form{
+        vertical-align: top;
+        display: inline-block;
+        width: calc(100% - 3.5rem);
+        height: 2.25rem;
+        margin: $mobile-margin  0;
+        padding-left: 0.75rem;
+        border-radius: 0.25rem;
+        border: 1px solid $outline-color;
+        background-color: #FAFAFA;
+        @include tablet{
+            width: 15.625rem;
+            padding-left: 1rem;
+            margin: 0 1.5rem 0;
+            height: 3rem;
+
+        }
+    }
+
+    &__search-input{
+        border: none;
+        background-color: #FAFAFA;
+        margin:0;
+        height: 100%;
+        width: 80%;
+
+        @include body-font;
+        &::placeholder{
+            @include body-font;
+
+        }
+
+        
+    }
+
+    &__search-btn{
+        vertical-align: middle;
+        margin-right: 1rem;
+        border:none;
+        background-color: #FAFAFA;
+
+    }
+
+    &__avatar{
+        border-radius: 50%;
+        object-fit: cover;
+        width: 2.25rem;
+        min-height: 2.25rem;
+        margin: $mobile-margin 0 $mobile-margin $mobile-margin;
+        @include tablet {
+              width: 3rem;
+              height: 3rem;
+              margin: 0;
+              order:1;
+        }
+    }
+
+    &__upload-btn{
+        width:100%;
+        @include flex-justify(space-between);
+        align-items: center;
+        padding: 0.5rem;
+        padding-right: calc(50% - 1.5625rem);
+        height: 2.25rem;
+        background-color: #0095FF ;
+        border: 1px solid $outline-color;
+        border-radius: 0.25rem;
+        color:#fff;
+        @include labels-btns-font;
+        @include tablet{
+            width:10rem;
+            padding-right: 3rem;
+            margin: 0  1.5rem 0 0;
+            height: 3rem;
+        }
+
+        &:hover{
+            background-color: #0065AD;
+
+        }
+
+        
+    }
+}
