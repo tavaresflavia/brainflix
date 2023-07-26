@@ -1,8 +1,8 @@
 import "./Nav.scss";
-import logoSrc from "../assets/images/BrainFlix-logo.svg";
-import avatarSrc from "../assets/images/Mohan-muruge.jpg";
-import uploadBtn from "../assets/images/upload.svg";
-import searchBtn from "../assets/images/search.svg";
+import logoSrc from "../../assets/images/BrainFlix-logo.svg";
+import avatarSrc from "../../assets/images/Mohan-muruge.jpg";
+import uploadBtn from "../../assets/images/upload.svg";
+import searchBtn from "../../assets/images/search.svg";
 
 
 const Nav = () => {
