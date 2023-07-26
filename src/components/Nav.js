@@ -1,28 +1,25 @@
 import "./Nav.scss";
+import logoSrc from "../assets/images/BrainFlix-logo.svg";
+import avatarSrc from "../assets/images/Mohan-muruge.jpg";
+import uploadBtn from "../assets/images/upload.svg";
+import searchBtn from "../assets/images/search.svg";
+
 
 const Nav = () => {
   return (
     <header>
-      <nav>
-        <div class="nav__logo-box">
-          <img
-            class="nav__logo"
-            src="./BrainFlix-Package-Sprint-1/3.0 - Assets/Logo/BrainFlix-logo.svg"
-            alt="logo"
-          />
+      <nav className="nav">
+        <div className="nav__logo-box">
+          <img className="nav__logo" src={logoSrc} alt="logo" />
         </div>
-        <div class="nav__search-box">
-          <input class="nav__search" type="search" />
-          <img
-            class="nav__avatar"
-            src="./BrainFlix-Package-Sprint-1/3.0 - Assets/Images/Mohan-muruge.jpg"
-            alt="avatar"
-          />
-          <button class="nav__button">
-            <img
-              src="./BrainFlix-Package-Sprint-1/3.0 - Assets/Icons/upload.svg"
-              alt="upload icon"
-            />
+        <div className="nav__interactive-bar">
+          <form className="nav__form">
+          <button className="nav__search-btn"><img src= {searchBtn} className="nav__search-icon" alt="magnifying glass"></img></button>
+          <input className="nav__search-input" type="search" placeholder="Search" />
+          </form>
+          <img className="nav__avatar" src={avatarSrc} alt="avatar" />
+          <button className="nav__upload-btn" >
+            <img src={uploadBtn} alt="upload icon" />
             UPLOAD
           </button>
         </div>
