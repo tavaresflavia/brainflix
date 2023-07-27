@@ -1,0 +1,47 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.button--nav{
+    @include flex-justify(space-between);
+    align-items: center;
+    width:100%;
+    padding: 0.5rem;
+    padding-right: calc(50% - 1.5625rem);
+    height: 2.25rem;
+    background-color: #0095FF ;
+    border: 1px solid $outline-color;
+    border-radius: 0.25rem;
+    color:#fff;
+    @include labels-btns-font;
+    @include tablet{
+        width:10rem;
+        padding-right: 3rem;
+        margin: 0  1.5rem 0 0;
+        height: 2.5rem;
+    }
+
+    &:hover{
+        background-color: #0065AD;
+
+    }
+
+}
+
+.button-wrapper{
+    @include tablet{
+        display: inline-block;
+    vertical-align: top;
+    }
+
+}
+     
+
+.button--form{
+    @extend .button--nav;
+    @include tablet{
+    margin:0.25rem 0 0 1.5rem;
+    }
+
+}

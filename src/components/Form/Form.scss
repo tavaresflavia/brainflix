@@ -1,0 +1,63 @@
+
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form{
+    width: 100%;
+    padding-bottom:$mobile-margin;
+    border-bottom: 1px solid $outline-color;
+    @include tablet{
+        padding-bottom: $tablet-desktop-margin;
+    }
+
+&__label{
+    display: block;
+    @include body-font;
+    color: $secondary-text-color;
+    font-weight: 700;
+
+}
+
+&__input-box{
+    display: inline-block;
+    width: calc(100% - 3.5rem);
+    @include tablet{
+        width: calc(100% - 4rem );
+
+    }
+}
+
+&__input{
+    width:100%;
+    resize: none;
+    border: 1px solid $outline-color;
+    background-color: #FAFAFA; 
+    border-radius: 4px;
+    height: 6.75rem;
+    margin: 0.25rem 0 1rem;
+    padding: 0.75rem;
+    outline: none;
+    @include body-font;
+    font-family: "Avenir";
+    @include tablet{
+      padding: 0.5rem 1rem;
+      margin-bottom:0;
+      height: 2.5rem;
+      width: calc(100% - 11.5rem );
+    }
+    &:focus{
+      border: 1px solid $primary-text-color;
+    }
+
+    &::placeholder{
+      font-family: "Avenir";
+      color:#000000;
+      @include body-font;
+    }
+
+}
+
+
+
+}

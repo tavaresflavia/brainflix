@@ -1,0 +1,19 @@
+
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comment-section{
+    @include section-padding;
+
+    margin: $mobile-margin 0;
+
+
+    &__count{
+        color:$primary-text-color;
+        @include body-font;
+        font-weight: 700;
+        margin: $tablet-desktop-margin 0;
+    }
+
+}
