@@ -8,11 +8,11 @@ const Form = () => {
         <form className="form" id="form">
           <Avatar form={true}/>
             <div className= "form__input-box">
-            <label className="form__label labels">
+            <label className="form__label" htmlFor = "comment">
                 JOIN THE CONVERSATION
             </label>
             <textarea
-                name="comment"
+                name="comment" id="comment"
                 className="form__input"
                 placeholder="Add new comment">
             </textarea>

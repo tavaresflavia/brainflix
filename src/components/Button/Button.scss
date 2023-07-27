@@ -9,7 +9,7 @@
     width:100%;
     padding: 0.5rem;
     padding-right: calc(50% - 1.5625rem);
-    height: 2.25rem;
+    height: 2.5rem;
     background-color: #0095FF ;
     border: 1px solid $outline-color;
     border-radius: 0.25rem;
@@ -19,12 +19,10 @@
         width:10rem;
         padding-right: 3rem;
         margin: 0  1.5rem 0 0;
-        height: 2.5rem;
     }
 
     &:hover{
         background-color: #0065AD;
-
     }
 
 }
@@ -32,7 +30,7 @@
 .button-wrapper{
     @include tablet{
         display: inline-block;
-    vertical-align: top;
+        vertical-align: top;
     }
 
 }
