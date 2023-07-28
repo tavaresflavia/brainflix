@@ -1,0 +1,46 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video {
+  margin-bottom: $mobile-margin;
+  &__img-wrapper {
+    display: inline-block;
+    border-radius: 0.25rem;
+    width: 7rem;
+    height: 4.375rem;
+  }
+
+  &__img {
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    margin-left: $mobile-margin;
+    vertical-align: top;
+    height: 4.375rem;
+    width: 10rem; 
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+        
+    }
+  }
+
+  &__title {
+    @include body-font;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  &__channel {
+    @include body-font;
+  }
+}

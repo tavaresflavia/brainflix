@@ -1,0 +1,14 @@
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video-list {
+    @include section-padding;
+    
+  &__title {
+    @include body-font;
+    color: $secondary-text-color;
+    font-weight: 700;
+    margin: $mobile-margin 0;
+  }
+}
