@@ -2,7 +2,6 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/mixins" as *;
 
-
 *,
 *::after,
 *::before {
@@ -11,9 +10,20 @@
   padding: 0;
 }
 
-body{
-  font-family: "Avenir"; 
+body {
+  font-family: "Avenir";
 }
 
-
-
+.main {
+  @include desktop {
+    
+    @include flex-justify(center);
+  }
+  &__content {
+    @include desktop {
+      width:54rem;
+      @include flex-justify(space-between);
+      flex-direction: column  ;
+    }
+  }
+}

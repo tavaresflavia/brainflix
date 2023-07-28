@@ -1,9 +1,9 @@
-@use "../../styles/partials/typography";
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
 .video {
   margin-bottom: $mobile-margin;
+
   &__img-wrapper {
     display: inline-block;
     border-radius: 0.25rem;
@@ -27,6 +27,7 @@
     flex-direction: column;
     justify-content: space-between;
     @include tablet {
+      width:11.5rem;
         
     }
   }

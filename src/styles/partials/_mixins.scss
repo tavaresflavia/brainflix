@@ -22,8 +22,6 @@
   padding:0 $mobile-margin;
   @include tablet{
     padding: 0 $tablet-desktop-margin;
-    max-width: $fixed-width;
-    margin: 1.5rem auto;
   }
  
 }

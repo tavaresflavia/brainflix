@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+
+.engagement {
+  color: $outline-color;
+
+  &__icon {
+    margin: 0 $mobile-margin;
+  }
+}
