@@ -11,9 +11,9 @@
   &__title {
     @include body-font;
     color: $secondary-text-color;
-    font-weight: 700;
+    font-weight: 600;
     margin: $mobile-margin 0;
-    @include tablet{
+    @include tablet {
       margin: $tablet-margin-edge 0 $mobile-margin;
     }
   }

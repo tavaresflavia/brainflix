@@ -3,12 +3,13 @@
 
 .video {
   margin-bottom: $mobile-margin;
+  @include flex-justify(flex-start);
 
   &__img-wrapper {
     display: inline-block;
     border-radius: 0.25rem;
-    width: 7rem;
-    height: 4.375rem;
+    width: 8.2rem;
+    height: 4.5rem;
   }
 
   &__img {
@@ -22,13 +23,12 @@
     margin-left: $mobile-margin;
     vertical-align: top;
     height: 4.375rem;
-    width: 10rem; 
+    width: 10rem;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     @include tablet {
-      width:11.5rem;
-        
+      width: 11.5rem;
     }
   }
 

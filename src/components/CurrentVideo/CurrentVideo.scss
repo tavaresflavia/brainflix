@@ -4,18 +4,18 @@
 
 .current-video {
   width: 100%;
-  height: calc(100vw * 8 / 16);
+  height: calc(100vw * 9 / 16); // calculation to ensure 16:9
 
   background-color: #000000;
   @include tablet {
     padding: 0 $tablet-desktop-margin;
     height: calc(
       (100vw - 2 * $tablet-desktop-margin) * 9 / 16
-    ); // calculation to ensure 12:9
+    ); // calculation to ensure 16:9
   }
   @include desktop {
     @include flex-justify(center);
-    height: 36.56rem;
+    height: 36.56rem; // to ensure 16:9
   }
 
   &__player {

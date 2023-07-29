@@ -1,10 +1,8 @@
-import { useState } from "react";
 import videos from "../../data/videos.json";
 import Video from "../Video/Video.js";
 import "./VideoList.scss";
 
-const VideoList = ({selectVideo,selectedVideo}) => {
-  
+const VideoList = ({ selectVideo, selectedVideo }) => {
   const listedVideos = videos.filter((el) => el.id !== selectedVideo.id);
 
   return (
@@ -12,13 +10,14 @@ const VideoList = ({selectVideo,selectedVideo}) => {
       <h2 className="video-list__title">NEXT VIDEOS</h2>
       {listedVideos.map((el) => {
         return (
-          <Video 
-          key = {el.id}
-          id = {el.id}
-          title={el.title} 
-          channel={el.channel} 
-          imgSrc={el.image} 
-          onVideoSelect = {selectVideo}/>
+          <Video
+            key={el.id}
+            id={el.id}
+            title={el.title}
+            channel={el.channel}
+            imgSrc={el.image}
+            onVideoSelect={selectVideo}
+          />
         );
       })}
     </section>

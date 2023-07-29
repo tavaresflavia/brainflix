@@ -4,8 +4,8 @@
 .video-details {
   @include section-padding;
   @include desktop {
-    width: 54rem;
     padding-right: 0;
+    padding-bottom: 1rem; // added to match desktop mockup 
   }
 
   &__title {
@@ -35,7 +35,7 @@
   border-bottom: 1px solid $outline-color;
   @include tablet {
     border-top: none;
-    padding: 0;
+    padding: 0 0 0.25rem; // added 4px to match tablet & desktop mockup
   }
 
   @include desktop {
@@ -64,6 +64,11 @@
 
   &__stats {
     @extend .details__upload;
+    padding-right: 3rem; // to match mobile mockup
+    @include tablet{
+      padding-right: 0;
+
+    }
   }
 
   &__description {

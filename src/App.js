@@ -8,10 +8,11 @@ import videos from "./data/videos.json";
 
 
 function App() {
+
   const [currentVideo, setCurrentVideo] = useState(videos[0]);
 
   const selectVideo = (selectedId) => {
-    let selectedVideo = videos.find((el) => el.id === selectedId);
+    const selectedVideo = videos.find((el) => el.id === selectedId);
     setCurrentVideo(selectedVideo);
   };
 

@@ -1,6 +1,7 @@
 import "./CurrentVideo.scss";
 
 const CurrentVideo = ({selectedVideo}) => {
+
   return (
     <section className="current-video">
       <video
@@ -9,6 +10,7 @@ const CurrentVideo = ({selectedVideo}) => {
         poster={selectedVideo.image}></video>
     </section>
   );
+  
 };
 
 export default CurrentVideo;
