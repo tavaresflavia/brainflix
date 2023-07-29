@@ -1,24 +1,21 @@
-import { directive } from "@babel/types";
 import commentIcon from "../../assets/images/add_comment.svg";
 import uploadIcon from "../../assets/images/upload.svg";
 import  "./Button.scss"
 
-const Button = (form) => {
+const Button = ({form}) => {
 
     //added if else to improve readability 
-
+    
     if (form){
         return (
-            <div className= "button-wrapper">
-            <button className= "button--form">
-                <img src={commentIcon} alt="add comment icon" /> COMMENT
+            <button className= " button button--form">
+                <img className = "button__icon" src={commentIcon} alt="add comment icon" /> COMMENT
             </button>
-            </div>
         );
     }else{
         return (
-        <a href="#" className= "button--nav">
-            <img src={uploadIcon} alt="upload icon" /> UPLOAD
+        <a href="#" className= "button button--nav">
+            <img className = "button__icon" src={uploadIcon} alt="upload icon" /> UPLOAD
         </a>
         );
     }

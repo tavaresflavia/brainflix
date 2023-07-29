@@ -39,13 +39,3 @@
 }
 
 
-@mixin labels-btns-font{
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  @include tablet{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-  }
-}
-

@@ -2,9 +2,9 @@ import "./Avatar.scss";
 import avatarSrc from "../../assets/images/Mohan-muruge.jpg";
 
 
-const Avatar = (form) => {
+const Avatar = ({form}) => {
     return (
-        <img className= {form ? "avatar--form" : "avatar--nav"} src={avatarSrc} alt="avatar" />
+        <img className= {form ? "avatar avatar--form" : "avatar avatar--nav"} src={avatarSrc} alt="user avatar" />
     );
 };
 

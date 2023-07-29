@@ -1,26 +1,31 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.avatar--nav{
-    border-radius: 50%;
-    object-fit: cover;
-    width: 2.25rem  ;
-    min-height: 2.25rem;
-    margin: $mobile-margin 0 $mobile-margin $mobile-margin;
-    @include tablet {
-          width: 2.5rem;
-          height: 2.5rem;
-          margin: 0;
-          order:1;
-    }
-}
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 2.25rem;
+  min-height: 2.25rem;
+  @include tablet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 
-.avatar--form{
-    @extend .avatar--nav;
-    vertical-align: top;
-    margin: 1.375rem $mobile-margin 0 0;
+  &--nav {
+    margin: $mobile-margin 0 $mobile-margin $mobile-margin;
+
     @include tablet {
-          margin-right: $tablet-desktop-margin;
-          order:0;
-     }
+      margin: 0;
+      order: 1;
+    }
+  }
+
+  &--form {
+    vertical-align: top;
+    margin: 1.625rem $mobile-margin 0 0;
+
+    @include tablet {
+      margin-right: $tablet-desktop-margin;
+    }
+  }
 }
