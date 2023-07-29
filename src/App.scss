@@ -19,11 +19,4 @@ body {
     
     @include flex-justify(center);
   }
-  &__content {
-    @include desktop {
-      width:54rem;
-      @include flex-justify(space-between);
-      flex-direction: column  ;
-    }
-  }
 }

@@ -1,0 +1,7 @@
+@use "../../styles/partials/mixins" as *;
+
+.content-section {
+    @include desktop {
+      width:54rem;
+    }
+  }

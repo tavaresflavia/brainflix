@@ -2,13 +2,15 @@ import "./CommentSection.scss";
 import Form from "../Form/Form.js";
 import CommentList from "../CommentList/CommentList.js";
 
-const Comments = () => {
+const Comments = ({selectedVideo}) => {
 
     return (
     <section className="comment-section">
-      <p className="comment-section__count">3 comments</p>
+      <p className="comment-section__count">{selectedVideo.comments.length} Comment{selectedVideo.comments.length > 1 ? "s":""}
+      </p>
           <Form/>
-          <CommentList/>
+          <CommentList 
+          selectedVideo = {selectedVideo}/>
       </section>
     );
 };

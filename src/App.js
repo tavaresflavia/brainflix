@@ -1,11 +1,11 @@
+import { useState } from "react";
 import "./App.scss";
 import Nav from "./components/Nav/Nav.js";
-import Comments from "./components/CommentSection/CommentSection.js";
 import CurrentVideo from "./components/CurrentVideo/CurrentVideo.js";
+import ContentSection from "./components/ContentSection/ContentSection";
 import VideoList from "./components/VideoList/VideoList.js";
-import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDetails";
 import videos from "./data/videos.json";
-import { useState } from "react";
+
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videos[0]);
@@ -23,15 +23,8 @@ function App() {
       selectedVideo={currentVideo} />
 
       <main className="main">
-
-        <div className = "main__content">
-
-          <CurrentVideoDetails 
-          selectedVideo={currentVideo} />
-
-          <Comments />
-
-        </div>
+        <ContentSection
+        selectedVideo={currentVideo}/>
         <VideoList 
         selectVideo={selectVideo} 
         selectedVideo={currentVideo} />

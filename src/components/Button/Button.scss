@@ -1,45 +1,41 @@
-@use "../../styles/partials/typography";
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.button-wrapper {
+  @include tablet {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
 
-.button--nav{
+.button {
+  &--nav {
     @include flex-justify(space-between);
     align-items: center;
-    width:100%;
+    width: 100%;
     padding: 0.5rem;
-    padding-right: calc(50% - 1.5625rem);
+    padding-right: calc(50% - 1.5625rem); // center the name on the button
     height: 2.5rem;
-    background-color: #0095FF ;
+    background-color: #0095ff;
     border: 1px solid $outline-color;
     border-radius: 0.25rem;
-    color:#fff;
+    color: #fff;
     @include labels-btns-font;
-    @include tablet{
-        width:10rem;
-        padding-right: 3rem;
-        margin: 0  1.5rem 0 0;
+    @include tablet {
+      width: 10rem;
+      padding-right: 3rem;
+      margin: 0 1.5rem 0 0;
     }
 
-    &:hover{
-        background-color: #0065AD;
+    &:hover {
+      background-color: #0065ad;
     }
+  }
 
-}
-
-.button-wrapper{
-    @include tablet{
-        display: inline-block;
-        vertical-align: top;
-    }
-
-}
-     
-
-.button--form{
+  &--form {
     @extend .button--nav;
-    @include tablet{
-    margin:0.25rem 0 0 1.5rem;
+    @include tablet {
+      margin: 0.25rem 0 0 1.5rem;
     }
-
+  }
 }

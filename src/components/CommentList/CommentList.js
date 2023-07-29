@@ -1,17 +1,15 @@
 import Comment from "../Comment/Comment";
-import videoDetails from "../../data/video-details.json"
 
-const CommentList = () => {
+const CommentList = ({ selectedVideo }) => {
 
-    console.log(videoDetails[0].comments);
-
-   
     return (
-        <section className = "card-list">
+        <section className = "comment-list">
 
-            {videoDetails[0].comments.map((el) => {
+            {selectedVideo.comments.map((el) => {
 
                 return (<Comment 
+                key = {el.id}
+                id = {el.id}
                 name = {el.name} 
                 comment = {el.comment} 
                 date = {new Date(el.timestamp).toLocaleDateString("en-US")} 

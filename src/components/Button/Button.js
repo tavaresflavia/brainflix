@@ -5,6 +5,8 @@ import  "./Button.scss"
 
 const Button = (form) => {
 
+    //added if else to improve readability 
+
     if (form){
         return (
             <div className= "button-wrapper">
