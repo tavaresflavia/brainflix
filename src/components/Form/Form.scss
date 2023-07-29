@@ -18,7 +18,7 @@
     display: block;
     @include body-font;
     color: $secondary-text-color;
-    font-weight: 700;
+    font-weight: 600; //added demi font to match the mockup 
   }
 
   &__input-box {

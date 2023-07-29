@@ -8,6 +8,15 @@
         font-style: normal;
 }
 
+//Style guide uses only 400 and 700, added 600 to match mock up 
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/AvenirNextLTPro-Demi.woff2), url(../../assets/fonts/AvenirNextLTPro-Demi.woff);
+    font-weight: 600;
+    font-style: normal;
+}
+
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/AvenirNextLTPro-Bold.woff2), url(../../assets/fonts/AvenirNextLTPro-Bold.woff);
