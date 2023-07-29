@@ -6,9 +6,7 @@ import ContentSection from "./components/ContentSection/ContentSection";
 import VideoList from "./components/VideoList/VideoList.js";
 import videos from "./data/videos.json";
 
-
 function App() {
-
   const [currentVideo, setCurrentVideo] = useState(videos[0]);
 
   const selectVideo = (selectedId) => {
@@ -20,14 +18,15 @@ function App() {
     <>
       <Nav />
 
-      <CurrentVideo 
-      selectedVideo={currentVideo} />
+      <CurrentVideo selectedVideo={currentVideo} />
 
       <main className="main">
-        <ContentSection
-        selectedVideo={currentVideo}/>
+
+        <ContentSection 
+        selectedVideo={currentVideo} />
+
         <VideoList 
-        selectVideo={selectVideo} 
+        onVideoSelect={selectVideo} 
         selectedVideo={currentVideo} />
         
       </main>

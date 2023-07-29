@@ -2,7 +2,7 @@ import videos from "../../data/videos.json";
 import Video from "../Video/Video.js";
 import "./VideoList.scss";
 
-const VideoList = ({ selectVideo, selectedVideo }) => {
+const VideoList = ({ onVideoSelect, selectedVideo }) => {
   const listedVideos = videos.filter((el) => el.id !== selectedVideo.id);
 
   return (
@@ -16,7 +16,7 @@ const VideoList = ({ selectVideo, selectedVideo }) => {
             title={el.title}
             channel={el.channel}
             imgSrc={el.image}
-            onVideoSelect={selectVideo}
+            onVideoSelect={onVideoSelect}
           />
         );
       })}
