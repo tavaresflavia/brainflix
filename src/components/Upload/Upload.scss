@@ -1,0 +1,99 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.upload {
+    @include section-padding;
+    @include desktop{
+      width:$desktop-width;
+      margin-inline: auto;
+
+    }
+  &__page-title {
+    color: $primary-text-color;
+    margin: 1.5rem auto 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @include tablet {
+      margin: 2.25rem 0 1.5rem;
+      font-size: 2.0625rem;
+      line-height: 2.75rem;
+    }
+
+    @include desktop {
+      padding-right: $tablet-desktop-margin;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    @include tablet{
+        border-top: 1px solid $outline-color ;
+        border-bottom: 1px solid $outline-color ;
+        padding-top: $tablet-desktop-margin; 
+        margin-bottom: $tablet-desktop-margin;
+        
+    }
+    @include tablet{
+      display: flex;
+    }
+
+  }
+  &__label {
+    padding-bottom: 0.25rem;
+    display: block;
+    @include body-font;
+    color: $secondary-text-color;
+    font-weight: 600; //added demi font to match the mockup
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: $mobile-margin;
+    @include tablet{
+        width:45%;
+        margin-bottom: $tablet-desktop-margin;
+    }
+    @include desktop{
+      width: 23rem;
+
+    }
+
+  }
+
+  &__text-inputs{
+    @include desktop{
+      margin-left: $tablet-desktop-margin;
+      width: 100%;
+
+    }
+  }
+  &__title {
+    width:100%;
+    border: 1px solid $outline-color;
+    background-color: #fafafa;
+    border-radius: 4px;
+    outline: none;
+    @include body-font;
+    font-family: "Avenir";
+    padding: 0.75rem;
+    margin-bottom:$mobile-margin;
+    &:focus {
+      border: 1px solid $primary-text-color;
+    }
+    &::placeholder {
+      font-family: "Avenir";
+      color: #000000;
+      @include body-font;
+    }
+  }
+  &__description {
+    @extend .upload__title;
+    resize: none;
+    height: 6.75rem;
+    
+
+  }
+}
