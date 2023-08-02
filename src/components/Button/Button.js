@@ -1,25 +1,13 @@
-import commentIcon from "../../assets/images/add_comment.svg";
-import uploadIcon from "../../assets/images/upload.svg";
 import  "./Button.scss"
 
-const Button = ({form}) => {
+const Button = ({location,iconSrc,altText,innerText}) => {
 
-    //added if else to improve readability 
-    
-    if (form){
         return (
-            <button className= " button button--form">
-                <img className = "button__icon" src={commentIcon} alt="add comment icon" /> COMMENT
-            </button>
+            <div className= {`button button--${location}`}>
+                <img className = "button__icon" src={iconSrc} alt= {altText} /> {innerText}
+            </div>
         );
-    }else{
-        return (
-        <a href="#" className= "button button--nav">
-            <img className = "button__icon" src={uploadIcon} alt="upload icon" /> UPLOAD
-        </a>
-        );
-    }
-    
-};
+
+    };
 
 export default Button;

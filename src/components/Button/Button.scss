@@ -4,7 +4,7 @@
 .button {
   @include flex-justify(space-between);
   align-items: center;
-  padding: 0 calc(50% - 1.8rem) 0 0.5rem;
+  padding: 0 calc(50% - 1.5rem) 0 0.5rem;
   background-color: #0095ff;
   border: 1px solid $outline-color;
   border-radius: 0.25rem;
@@ -27,7 +27,6 @@
   }
 
   &--nav {
-    text-decoration: none;
     @include tablet {
       margin: 0 1.5rem 0 0;
     }

@@ -1,7 +1,7 @@
-import React from 'react';
 import "./Form.scss"
 import Avatar from '../Avatar/Avatar.js';
 import Button from '../Button/Button.js';
+import commentIcon from "../../assets/images/add_comment.svg";
 
 const Form = () => {
     return (
@@ -16,7 +16,11 @@ const Form = () => {
                 className="form__input"
                 placeholder="Add new comment">
             </textarea>
-            <Button form={true}/>
+            <Button
+              location="form"
+              iconSrc={commentIcon}
+              altText="comment icon"
+              innerText="COMMENT"/>
             </div>
         </form>
             

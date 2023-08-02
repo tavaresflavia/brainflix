@@ -29,6 +29,10 @@
       @include flex-justify(space-between);
     }
   }
+
+  &__link{
+    text-decoration: none;
+  }
 }
 
 .search-bar {

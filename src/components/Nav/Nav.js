@@ -1,15 +1,19 @@
 import "./Nav.scss";
+import { Link } from "react-router-dom";
 import logoSrc from "../../assets/images/BrainFlix-logo.svg";
 import Avatar from "../Avatar/Avatar.js";
 import Button from "../Button/Button.js";
 import searchBtn from "../../assets/images/search.svg";
+import uploadIcon from "../../assets/images/upload.svg";
 
 const Nav = () => {
   return (
     <header>
       <nav className="nav">
         <div className="nav__logo-box">
-          <img className="nav__logo" src={logoSrc} alt="logo" />
+          <Link className="nav__link" to="/">
+            <img className="nav__logo" src={logoSrc} alt="logo" />
+          </Link>
         </div>
         <div className="nav__interactive-bar">
           <div className="search-bar">
@@ -24,7 +28,14 @@ const Nav = () => {
             />
           </div>
           <Avatar />
-          <Button />
+          <Link className="nav__link" to="/upload">
+            <Button
+              location="nav"
+              iconSrc={uploadIcon}
+              altText="upload icon"
+              innerText="UPLOAD"
+            />
+          </Link>
         </div>
       </nav>
     </header>

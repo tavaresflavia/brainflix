@@ -1,7 +1,7 @@
 import "./Video.scss";
 import { useNavigate } from "react-router-dom";
 
-const Video = ({ id, title, channel, imgSrc, onVideoSelect }) => {
+const Video = ({ id, title, channel, imgSrc}) => {
   const navigate = useNavigate();
   
   const handleClick = () => {
