@@ -15,10 +15,10 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav__interactive-bar">
-          <input className="nav__search"
-              type="text"
-              placeholder="Search">
-          </input>
+          <input
+            className="nav__search"
+            type="text"
+            placeholder="Search"></input>
           <Avatar />
           <Link className="nav__link" to="/upload">
             <Button

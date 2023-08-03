@@ -78,7 +78,7 @@
     padding: 0.75rem;
     margin-bottom: $mobile-margin;
     &:focus {
-      border: 1px solid #0095ff;
+      border: 1px solid $cta-color;
     }
     &::placeholder {
       font-family: "Avenir";
@@ -143,6 +143,6 @@
     line-height: 1.25rem;
     font-weight: 700;
     text-decoration: none;
-    color: #0095ff;
+    color: $cta-color;
   }
 }
