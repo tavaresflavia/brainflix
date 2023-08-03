@@ -3,6 +3,8 @@ import "./App.scss";
 import Nav from "./components/Nav/Nav.js";
 import UploadPage from "./pages/UploadPage/UploadPage.js";
 import HomePage from "./pages/HomePage/HomePage";
+import SuccessSubmitPage from "./pages/SuccessSubmitPage/SuccessSubmitPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
             path="/videos/:id"
             element={<HomePage />}
           />
-          {/* <Route path="*" element={<NotFoundPage/>}/> */}
+          <Route path="/submitted" element={<SuccessSubmitPage/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>
 

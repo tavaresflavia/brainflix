@@ -2,12 +2,12 @@
 @use "../../styles/partials/mixins" as *;
 
 .upload {
-    @include section-padding;
-    @include desktop{
-      width:$desktop-width;
-      margin-inline: auto;
+  @include section-padding;
+  @include desktop {
+    width: $desktop-width;
+    margin-inline: auto;
+  }
 
-    }
   &__page-title {
     color: $primary-text-color;
     margin: 1.5rem auto 1rem;
@@ -27,18 +27,17 @@
 
   &__form {
     width: 100%;
-    @include tablet{
-        border-top: 1px solid $outline-color ;
-        border-bottom: 1px solid $outline-color ;
-        padding-top: $tablet-desktop-margin; 
-        margin-bottom: $tablet-desktop-margin;
-        
+    @include tablet {
+      border-top: 1px solid $outline-color;
+      border-bottom: 1px solid $outline-color;
+      padding-top: $tablet-desktop-margin;
+      margin-bottom: $tablet-desktop-margin;
     }
-    @include tablet{
+    @include desktop {
       display: flex;
     }
-
   }
+
   &__label {
     padding-bottom: 0.25rem;
     display: block;
@@ -52,26 +51,24 @@
     width: 100%;
     border-radius: 4px;
     margin-bottom: $mobile-margin;
-    @include tablet{
-        width:45%;
-        margin-bottom: $tablet-desktop-margin;
+    @include tablet {
+      width: 45%;
+      margin-bottom: $tablet-desktop-margin;
     }
-    @include desktop{
+    @include desktop {
       width: 23rem;
-
     }
-
   }
 
-  &__text-inputs{
-    @include desktop{
+  &__text-inputs {
+    @include desktop {
       margin-left: $tablet-desktop-margin;
       width: 100%;
-
     }
   }
+
   &__title {
-    width:100%;
+    width: 100%;
     border: 1px solid $outline-color;
     background-color: #fafafa;
     border-radius: 4px;
@@ -79,21 +76,73 @@
     @include body-font;
     font-family: "Avenir";
     padding: 0.75rem;
-    margin-bottom:$mobile-margin;
+    margin-bottom: $mobile-margin;
     &:focus {
-      border: 1px solid $primary-text-color;
+      border: 1px solid #0095ff;
     }
     &::placeholder {
       font-family: "Avenir";
       color: #000000;
       @include body-font;
     }
+
+    &--invalid {
+      border: 1px solid #d22d2d;
+
+      &:focus {
+        border: 1px solid #d22d2d;
+      }
+    }
   }
+
   &__description {
     @extend .upload__title;
     resize: none;
     height: 6.75rem;
-    
 
+    &--invalid {
+      border: 1px solid #d22d2d;
+
+      &:focus {
+        border: 1px solid #d22d2d;
+      }
+    }
+  }
+
+  &__links {
+    @include tablet {
+      @include flex-justify(flex-end);
+    }
+  }
+
+  &__publish-link {
+    order: 1;
+    text-decoration: none;
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__cancel-wrapper {
+    margin-top: $mobile-margin;
+    width: 100%;
+    height: 2.5rem;
+    @include flex-justify(center);
+    align-items: center;
+    @include tablet {
+      margin: 0 $tablet-desktop-margin 0;
+      width: 10rem;
+      flex-direction: column;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__cancel-link {
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #0095ff;
   }
 }
