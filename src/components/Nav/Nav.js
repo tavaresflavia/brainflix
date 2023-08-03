@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import logoSrc from "../../assets/images/BrainFlix-logo.svg";
 import Avatar from "../Avatar/Avatar.js";
 import Button from "../Button/Button.js";
-import searchBtn from "../../assets/images/search.svg";
 import uploadIcon from "../../assets/images/upload.svg";
 
 const Nav = () => {
@@ -16,17 +15,10 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav__interactive-bar">
-          <div className="search-bar">
-            <img
-              src={searchBtn}
-              className="search-bar__icon"
-              alt="magnifying glass"></img>
-            <input
-              className="search-bar__input"
-              type="search"
-              placeholder="Search"
-            />
-          </div>
+          <input className="nav__search"
+              type="text"
+              placeholder="Search">
+          </input>
           <Avatar />
           <Link className="nav__link" to="/upload">
             <Button

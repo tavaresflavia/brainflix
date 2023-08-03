@@ -29,44 +29,42 @@
       @include flex-justify(space-between);
     }
   }
-
-  &__link{
-    text-decoration: none;
-  }
-}
-
-.search-bar {
-  vertical-align: top;
-  display: inline-flex;
-  align-items: center;
-  width: calc(100% - 3.5rem);
-  height: 2.25rem;
-  margin: $mobile-margin 0;
-  padding-left: 0.75rem;
-  border-radius: 0.25rem;
-  border: 1px solid $outline-color;
-  background-color: #fafafa;
-  @include tablet {
-    width: 15.625rem;
-    padding-left: 1rem;
-    margin: 0 1.5rem 0;
-    height: 2.5rem;
-  }
-
-  &__icon {
-    margin-right: 1rem;
-  }
-
-  &__input {
-    border: none;
+  
+  &__search {
+    background: no-repeat center left 1rem url("../../assets/images/search.svg");
+    vertical-align: top;
+    display: inline-flex;
+    align-items: center;
+    width: calc(100% - 3.5rem);
+    height: 2.25rem;
+    margin: $mobile-margin 0;
+    padding-left: 2.5rem;
+    border-radius: 0.25rem;
     background-color: #fafafa;
-    margin: 0;
-    height: 100%;
-    width: 80%;
-
+    border: 1px solid $outline-color;
+  
     @include body-font;
     &::placeholder {
       @include body-font;
     }
+  
+    @include tablet {
+      width: 15.625rem;
+      margin: 0 1.5rem 0;
+      height: 2.5rem;
+    }
+  
+    &:focus {
+      outline:none;
+      border: 1px solid #0095ff;
+    }
+  
   }
+
+  &__link {
+    text-decoration: none;
+  }
+
 }
+
+
