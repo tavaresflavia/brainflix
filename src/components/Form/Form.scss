@@ -48,7 +48,7 @@
       width: calc(100% - 11.5rem);
     }
     &:focus {
-      border: 1px solid $primary-text-color;
+      border: 1px solid $cta-color;
     }
 
     &::placeholder {

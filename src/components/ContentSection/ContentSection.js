@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import {useParams} from "react-router-dom";
 import CommentSection from "../CommentSection/CommentSection.js";
 import CurrentVideoDetails from "../CurrentVideoDetails/CurrentVideoDetails";
 import "./ContentSection.scss";
@@ -16,7 +15,6 @@ const ContentSection = ({ selectedVideo }) => {
     axios
         .get(`${ENDPOINT}/videos/${selectedVideo.id}${API_KEY}`)
         .then((response)=> {
-          console.log(response.data);
           setDisplayedVideo(response.data);
           setIsLoading(false);
 
