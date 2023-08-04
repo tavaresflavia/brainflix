@@ -6,8 +6,8 @@ import Button from "../Button/Button";
 import "./Upload.scss";
 
 const Upload = () => {
-  const [title, setTitle] = useState(null);
-  const [description, setDescription] = useState(null);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleChangeTitle = (e) => {
     setTitle(e.target.value);

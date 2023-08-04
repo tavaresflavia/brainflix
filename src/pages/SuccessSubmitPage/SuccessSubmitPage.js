@@ -9,12 +9,12 @@ const SuccessSubmitPage = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate("/");
-    }, 2000);
-  }, []);
+    }, 1500);
+  }, [navigate]);
 
   return (
     <div className="success">
-      <img className="success__icon" src={successIcon}></img>
+      <img className="success__icon" src={successIcon} alt="success icon"></img>
       <h1 className="success__title">Thank you!</h1>
       <p className="success__text">Your submission has been sent.</p>
     </div>
