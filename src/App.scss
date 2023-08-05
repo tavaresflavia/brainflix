@@ -14,9 +14,4 @@ body {
   font-family: "Avenir";
 }
 
-.main {
-  @include desktop {
-    
-    @include flex-justify(center);
-  }
-}
+

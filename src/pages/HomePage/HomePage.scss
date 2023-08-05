@@ -1,0 +1,8 @@
+@use "../../styles/partials/mixins" as *;
+
+.main {
+    @include desktop {
+      
+      @include flex-justify(center);
+    }
+  }

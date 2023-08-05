@@ -2,8 +2,12 @@
 @use "../../styles/partials/mixins" as *;
 
 .video {
+  text-decoration: none;
+
+  &__container{
   margin-bottom: $mobile-margin;
   @include flex-justify(flex-start);
+  }
 
   &__img-wrapper {
     display: inline-block;
@@ -27,6 +31,8 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    
     @include tablet {
       width: 11.5rem;
     }

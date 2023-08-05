@@ -1,15 +1,11 @@
 import "./Video.scss";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Video = ({ id, title, channel, imgSrc}) => {
-  const navigate = useNavigate();
-  
-  const handleClick = () => {
-    navigate(`/videos/${id}`)
-  };
 
   return (
-    <div className="video" onClick={handleClick}>
+    <Link className="video" to={`/videos/${id}`}>
+    <div className="video__container" >
       <div className="video__img-wrapper">
         <img 
         className="video__img" 
@@ -21,6 +17,7 @@ const Video = ({ id, title, channel, imgSrc}) => {
         <p className="video__channel">{channel}</p>
       </div>
     </div>
+    </Link>
   );
 };
 
