@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import imageSrc from "../../assets/images/Upload-video-preview.jpg";
-import publishIcon from "../../assets/images/publish.svg";
+import publishIcon from "../../assets/icons/publish.svg";
 import Button from "../Button/Button";
 import "./Upload.scss";
 

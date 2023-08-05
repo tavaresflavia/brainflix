@@ -1,5 +1,5 @@
 import "./SuccessSubmitPage.scss";
-import successIcon from "../../assets/images/excellence.png";
+import successIcon from "../../assets/icons/excellence.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

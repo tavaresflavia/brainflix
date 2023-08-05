@@ -1,9 +1,9 @@
 import "./Nav.scss";
 import { Link } from "react-router-dom";
-import logoSrc from "../../assets/images/BrainFlix-logo.svg";
+import logoSrc from "../../assets/logo/BrainFlix-logo.svg";
 import Avatar from "../Avatar/Avatar.js";
 import Button from "../Button/Button.js";
-import uploadIcon from "../../assets/images/upload.svg";
+import uploadIcon from "../../assets/icons/upload.svg";
 
 const Nav = () => {
   return (

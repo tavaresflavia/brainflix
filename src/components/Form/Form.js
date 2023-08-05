@@ -1,7 +1,7 @@
 import "./Form.scss"
 import Avatar from '../Avatar/Avatar.js';
 import Button from '../Button/Button.js';
-import commentIcon from "../../assets/images/add_comment.svg";
+import commentIcon from "../../assets/icons/add_comment.svg";
 
 const Form = () => {
     return (

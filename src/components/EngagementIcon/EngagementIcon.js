@@ -1,5 +1,5 @@
-import viewsSrc from "../../assets/images/views.svg";
-import likesSrc from "../../assets/images/likes.svg";
+import viewsSrc from "../../assets/icons/views.svg";
+import likesSrc from "../../assets/icons/likes.svg";
 import "./EngagementIcon.scss";
 import "./EngagementIcon.scss";
 
