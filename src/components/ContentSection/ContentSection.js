@@ -3,17 +3,18 @@ import CommentSection from "../CommentSection/CommentSection.js";
 import CurrentVideoDetails from "../CurrentVideoDetails/CurrentVideoDetails";
 import "./ContentSection.scss";
 import axios from "axios";
+const SERVER_URL  = process.env.REACT_APP_API_URL;
+
 
 const ContentSection = ({ selectedVideo }) => {
-  const ENDPOINT = "https://project-2-api.herokuapp.com";
-  const API_KEY = "?api_key=9698ede0-665d-40a1-8a7e-5cf3275f693d";
   const [displayedVideo, setDisplayedVideo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  console.log(SERVER_URL)
 
   useEffect(()=>{
     axios
-        .get(`${ENDPOINT}/videos/${selectedVideo.id}${API_KEY}`)
+        .get(SERVER_URL + "/videos/" + selectedVideo.id)
         .then((response)=> {
           setDisplayedVideo(response.data);
           setIsLoading(false);
