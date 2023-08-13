@@ -10,7 +10,6 @@ const ContentSection = ({ selectedVideo }) => {
   const [displayedVideo, setDisplayedVideo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  console.log(SERVER_URL)
 
   useEffect(()=>{
     axios
@@ -18,6 +17,7 @@ const ContentSection = ({ selectedVideo }) => {
         .then((response)=> {
           setDisplayedVideo(response.data);
           setIsLoading(false);
+          window.scrollTo(0, 0);
 
         })
         .catch( (err) => {
