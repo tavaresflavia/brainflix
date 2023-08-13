@@ -1,15 +1,27 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 import imageSrc from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import Button from "../Button/Button";
 import "./Upload.scss";
+const SERVER_URL  = process.env.REACT_APP_API_URL;
+
 
 const Upload = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleChangeTitle = (e) => {
+  const handleSubmission = () =>{
+    axios.post(SERVER_URL + "/videos/", {
+      title: title,
+      channel: "Mohan Muruge",
+      image: "http://localhost:5000/images/image9.jpg",
+      description: description
+    })
+  }
+
+  const handleChangeTitle = (e) => {  
     setTitle(e.target.value);
   };
 
@@ -81,7 +93,7 @@ const Upload = () => {
         </div>
       </form>
       <div className="upload__links">
-        <Link to="/submitted" className={"upload__publish-link " + (isFormValid() ? "":"upload__publish-link--disabled")} >
+        <Link  onClick= {handleSubmission} to="/submitted" className={"upload__publish-link " + (isFormValid() ? "":"upload__publish-link--disabled")} >
           <Button
             location="publish"
             iconSrc={publishIcon}
