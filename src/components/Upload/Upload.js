@@ -65,7 +65,7 @@ const Upload = () => {
         </label>
         <div className="upload__text-inputs">
           <label className="upload__label" htmlFor="title">
-            TITLE YOUR VIDEO
+            TITLE YOUR VIDEO <span className = {"upload__warning" + (isTitleValid() ? "--hidden":"")}>Input should be a minimum of 5 characters</span>
             <input
               type="text"
               className={
@@ -78,8 +78,9 @@ const Upload = () => {
               placeholder="Add a title to your video"
               onChange={handleChangeTitle}></input>
           </label>
+          
           <label className="upload__label" htmlFor="description">
-            ADD A VIDEO DESCRIPTION
+            ADD A VIDEO DESCRIPTION <span className = {"upload__warning" + (isDescriptionValid() ?  "--hidden":"")}>Input should be a minimum of 10 characters</span>
             <textarea
               className={
                 "upload__description " +
@@ -90,6 +91,7 @@ const Upload = () => {
               placeholder="Add a description to your video"
               onChange={handleChangeDescription}></textarea>
           </label>
+          
         </div>
       </form>
       <div className="upload__links">

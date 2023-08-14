@@ -8,10 +8,8 @@ import VideoList from "../../components/VideoList/VideoList.js";
 const SERVER_URL  = process.env.REACT_APP_API_URL;
 
 const HomePage = () => {
-  
-  const [currentVideo, setCurrentVideo] = useState(null);
-  const [videos, setVideos] = useState([]);
   const { id } = useParams();
+  const [videos, setVideos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -19,9 +17,8 @@ const HomePage = () => {
     axios
       .get(SERVER_URL + "/videos/")
       .then((response) => {
-        const videoId = id || response.data[0].id;
-        const selectedVideo = response.data.find((el) => el.id === videoId);
-        setCurrentVideo(selectedVideo);
+      
+  
         setVideos(response.data);
         setIsLoading(false);
       })
@@ -41,16 +38,18 @@ const HomePage = () => {
         retrieve the data at the moment.</p>
     );
   }
+  const videoId = id || videos[0].id;
+  const selectedVideo = videos.find((el) => el.id === videoId);
 
   return (
     <>
-      <CurrentVideo selectedVideo={currentVideo} />
+      <CurrentVideo selectedVideo={selectedVideo} />
 
       <main className="main">
-        <ContentSection selectedVideo={currentVideo} />
+        <ContentSection selectedVideo={selectedVideo} />
 
         <VideoList 
-        selectedVideo={currentVideo} 
+        selectedVideo={selectedVideo} 
         videos = {videos}/>
       </main>
     </>

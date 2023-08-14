@@ -108,6 +108,15 @@
       }
     }
   }
+  &__warning{
+    @include body-font;
+    color:#d22d2d;
+    margin-left: $mobile-margin;
+
+    &--hidden{
+      display:none;
+    }
+  }
 
   &__links {
     @include tablet {
